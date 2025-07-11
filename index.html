@@ -437,9 +437,39 @@
       </div>
     </section>
     <style>
+      html, body {
+        overflow-x: hidden !important;
+        width: 100vw !important;
+        max-width: 100vw !important;
+        position: relative;
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+      *, *::before, *::after {
+        box-sizing: inherit;
+      }
+      /* Prevent flex containers from overflowing */
+      .container, .container-fluid, .row, [class*="col-"] {
+        max-width: 100vw !important;
+        overflow-x: hidden !important;
+      }
+      /* Prevent horizontal scroll on flex layouts */
+      [style*="display: flex"], .timetable-flex-container, .video-links-center {
+        max-width: 100vw !important;
+        overflow-x: auto !important;
+      }
+      /* Remove min-widths that can cause overflow */
+      [style*="min-width: 100vw"], [style*="min-width: 340px"] {
+        min-width: 0 !important;
+      }
       @media (max-width: 900px) {
         .section-contact-details .row[style*="flex-direction: row"] {
           font-size: 13px !important;
+          width: 100vw !important;
+          max-width: 100vw !important;
+          overflow-x: auto !important;
+          gap: 10px !important;
         }
         .section-contact-details .section-heading {
           font-size: 20px !important;
@@ -528,10 +558,18 @@
         font-weight: bold;
         text-align: right;
       }
-      /* Lower timetable text size for mobile, keep row layout */
+      /* Lower timetable text size for mobile, keep row layout and prevent overflow */
       @media (max-width: 900px) {
+        .timetable-footer-col {
+          width: 100vw !important;
+          max-width: 100vw !important;
+          overflow-x: auto !important;
+        }
         .timetable-footer-col .timetable-title {
           font-size: 18px !important;
+        }
+        .timetable-footer-col .timetable-flex-container {
+          gap: 10px !important;
         }
         .timetable-footer-col .timetable-flex-col h4 {
           font-size: 13px !important;
