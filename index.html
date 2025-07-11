@@ -528,6 +528,21 @@
         font-weight: bold;
         text-align: right;
       }
+      /* Lower timetable text size for mobile, keep row layout */
+      @media (max-width: 900px) {
+        .timetable-footer-col .timetable-title {
+          font-size: 18px !important;
+        }
+        .timetable-footer-col .timetable-flex-col h4 {
+          font-size: 13px !important;
+        }
+        .timetable-footer-col .timetable-flex-list {
+          font-size: 9px !important;
+        }
+        .timetable-footer-col .timetable-flex-list li {
+          font-size: 9px !important;
+        }
+      }
       .certification-img {
         max-width: 220px;
         width: 100%;
@@ -869,11 +884,13 @@
       }
       .video-links-center {
         display: flex;
-        justify-content: center;
+        justify-content: flex-start; /* Fix: align items to left so first card is fully visible */
         align-items: flex-start;
         gap: 40px;
         width: 100%;
         min-width: 0;
+        padding-left: 16px; /* Add left padding so first card is not cut off */
+        box-sizing: border-box;
       }
       .video-link-thumb {
         flex: 0 0 auto;
@@ -925,9 +942,14 @@
       @media (max-width: 900px) {
         .video-links-center {
           gap: 18px;
+          padding-left: 10px;
+          flex-wrap: nowrap;
+          overflow-x: auto;
+          min-width: 100vw;
         }
         .video-link-thumb {
           width: 200px;
+          min-width: 200px;
         }
         .video-link-thumb img {
           height: 120px;
