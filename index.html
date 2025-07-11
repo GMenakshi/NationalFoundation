@@ -513,6 +513,187 @@
         transform: scale(1.08);
         z-index: 2;
       }
+      /* --- MOBILE RESPONSIVE ENHANCEMENTS --- */
+      @media (max-width: 900px) {
+        .video-links-center {
+          gap: 18px;
+        }
+        .video-link-thumb {
+          width: 200px;
+        }
+        .video-link-thumb img {
+          height: 120px;
+        }
+      }
+
+      @media (max-width: 767px) {
+        .main-header .top-bar, .main-header .top-bar-info, .main-header .top-bar-social {
+          text-align: center !important;
+          float: none !important;
+        }
+        .main-header .top-bar-info {
+          padding: 0;
+        }
+        .main-header .top-bar .row > div {
+          margin-bottom: 10px;
+        }
+        .navbar-header {
+          text-align: center;
+        }
+        .navbar-header .logo {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+        }
+        .navbar-header .logo img {
+          margin: 0 auto 4px auto;
+        }
+        .navbar-collapse {
+          text-align: center;
+        }
+        .navbar-nav {
+          float: none !important;
+          margin: 0 auto;
+        }
+        .navbar-nav > li {
+          display: inline-block;
+          float: none;
+        }
+        .slider-content .container {
+          text-align: center !important;
+        }
+        .slider-content h2, .slider-content h3 {
+          font-size: 20px !important;
+        }
+        .slider-content h3 {
+          font-size: 15px !important;
+        }
+        .btn-slider {
+          font-size: 15px !important;
+          padding: 8px 18px !important;
+        }
+        .section-heading {
+          font-size: 22px !important;
+        }
+        .section-subheading {
+          font-size: 15px !important;
+        }
+        .about-details ul {
+          font-size: 15px !important;
+        }
+        .about-counter-block {
+          margin-bottom: 18px;
+        }
+        .certification-gallery {
+          flex-direction: column !important;
+          gap: 18px !important;
+        }
+        .certification-img {
+          max-width: 98vw !important;
+        }
+        .treatment-plan-box {
+          padding: 18px 6px 12px 6px !important;
+          font-size: 15px !important;
+        }
+        .treatment-list {
+          font-size: 15px !important;
+        }
+        .treatment-footer {
+          font-size: 15px !important;
+        }
+        /* Contact Details Section */
+        #contact-details .row[style*="flex-direction: row"] {
+          flex-direction: column !important;
+          gap: 18px !important;
+          align-items: stretch !important;
+        }
+        #contact-details .col-md-5, #contact-details .col-md-7 {
+          max-width: 100% !important;
+          flex: 1 1 100% !important;
+          min-width: 0 !important;
+        }
+        #contact-details img.zoom-on-hover {
+          min-width: 0 !important;
+          max-width: 98vw !important;
+        }
+        /* Gallery */
+        .gallery-carousel {
+          display: flex;
+          flex-wrap: wrap;
+          gap: 10px;
+          justify-content: center;
+        }
+        .gallery-img {
+          width: 48vw !important;
+          min-width: 120px !important;
+          max-width: 98vw !important;
+        }
+        .gallery-img img {
+          width: 100% !important;
+          height: auto !important;
+        }
+        /* Timetable */
+        .timetable-flex-container {
+          flex-direction: column !important;
+          gap: 0 !important;
+        }
+        .timetable-flex-col {
+          max-width: 100% !important;
+          min-width: 0 !important;
+          margin-bottom: 10px !important;
+        }
+        .timetable-title {
+          font-size: 18px !important;
+        }
+        /* Footer */
+        .footer-contents .col-md-12 {
+          flex-direction: column !important;
+          gap: 10px !important;
+        }
+        .footer-contents img {
+          height: 28px !important;
+        }
+        .footer-contents span {
+          font-size: 16px !important;
+        }
+        .footer-contents .fa {
+          font-size: 18px !important;
+        }
+      }
+
+      @media (max-width: 480px) {
+        .slider-content h2 {
+          font-size: 16px !important;
+        }
+        .slider-content h3 {
+          font-size: 12px !important;
+        }
+        .btn-slider {
+          font-size: 12px !important;
+          padding: 6px 10px !important;
+        }
+        .section-heading {
+          font-size: 16px !important;
+        }
+        .section-subheading {
+          font-size: 12px !important;
+        }
+        .about-details ul {
+          font-size: 12px !important;
+        }
+        .treatment-plan-box {
+          font-size: 12px !important;
+        }
+        .treatment-list {
+          font-size: 12px !important;
+        }
+        .treatment-footer {
+          font-size: 12px !important;
+        }
+        .footer-contents span {
+          font-size: 12px !important;
+        }
+      }
     </style>
     <!--  end .section-how-we-work -->
 
