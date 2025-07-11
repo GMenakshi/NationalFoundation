@@ -1,0 +1,22 @@
+{
+  "name": "nationalfoundation-website",
+  "version": "1.0.0",
+  "description": "National Foundation - Psychology and Mental Health Services Website",
+  "main": "index.html",
+  "scripts": {
+    "start": "npx live-server --port=3000 --open=index.html",
+    "dev": "npx live-server --port=3000 --open=index.html --watch=.",
+    "install-server": "npm install -g live-server"
+  },
+  "keywords": [
+    "psychology",
+    "mental-health",
+    "website",
+    "national-foundation"
+  ],
+  "author": "National Foundation",
+  "license": "MIT",
+  "devDependencies": {
+    "live-server": "^1.2.2"
+  }
+}
