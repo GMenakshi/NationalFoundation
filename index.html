@@ -399,35 +399,21 @@
             <h2 class="section-heading">CONTACT DETAILS</h2>
           </div>
         </div>
-        <div class="row" style="display: flex; flex-direction: row; align-items: flex-start; justify-content: center; gap: 32px; flex-wrap: nowrap;">
-          <div class="col-md-5 col-sm-12" style="max-width: 600px; flex: 0 0 600px; padding: 0; text-align: center; display: flex; align-items: center; justify-content: center;">
-            <img class="zoom-on-hover" src="images/contact.jpeg" alt="Contact" style="width: 100%; max-width: 600px; min-width: 340px; border-radius: 16px; box-shadow: 0 4px 24px rgba(0,0,0,0.16); margin-bottom: 18px; transition: transform 0.25s cubic-bezier(.4,1.5,.5,1); cursor: zoom-in;" />
+        <div class="row contact-details-row">
+          <div class="col-md-5 col-sm-12 contact-img-col">
+            <img class="zoom-on-hover contact-img" src="images/contact.jpeg" alt="Contact" />
           </div>
-          <div class="col-md-7 col-sm-12" style="padding: 0; min-width: 260px; display: flex; align-items: center;">
-            <div style="background: #f8f9fa; border-radius: 10px; box-shadow: 0 2px 8px rgba(0,0,0,0.07); padding: 20px 18px; display: flex; align-items: flex-start; gap: 16px; width: 100%;">
-              <div style="width: 100%; display: flex; align-items: flex-start; gap: 14px;">
-                <div style="flex: 1 1 0; min-width: 0;">
-                  <a href="https://www.facebook.com/share/19M7o6bgVa/" target="_blank" style="
-                    font-size: 22px;
-                    font-weight: bold;
-                    color: #1877f3;
-                    text-decoration: none;
-                    letter-spacing: 0.2px;
-                    padding: 0 2px 2px 0;
-                    border-bottom: 1.5px solid #e3eafc;
-                    margin-bottom: 8px;
-                    display: inline-flex;
-                    align-items: center;
-                    gap: 10px;
-                  ">
+          <div class="col-md-7 col-sm-12 contact-desc-col">
+            <div class="contact-desc-box">
+              <div class="contact-desc-inner">
+                <div class="contact-facebook-block">
+                  <a href="https://www.facebook.com/share/19M7o6bgVa/" target="_blank" class="contact-facebook-link">
                     <span>Join Us on Facebook</span>
-                    <img src="images/facebook.png" alt="Facebook" style="width: 28px; height: 28px; border-radius: 6px; box-shadow: 0 1px 4px rgba(0,0,0,0.10); background: #fff; margin-left: 6px; vertical-align: middle;" />
+                    <img src="images/facebook.png" alt="Facebook" class="contact-facebook-img" />
                   </a>
-                  <div style="color: #222;">
-                    <div style="font-size: 15px; color: #444; margin-top: 2px;">
-                      Connect with our community for real recovery stories, expert advice, and ongoing support.<br>
-                      By following our Facebook page, you'll stay updated on events, success stories, and resources to help you or your loved ones on the path to recovery. <b>Choose National Foundation for a caring, proven approach to overcoming addiction.</b>
-                    </div>
+                  <div class="contact-facebook-desc">
+                    Connect with our community for real recovery stories, expert advice, and ongoing support.<br>
+                    By following our Facebook page, you'll stay updated on events, success stories, and resources to help you or your loved ones on the path to recovery. <b>Choose National Foundation for a caring, proven approach to overcoming addiction.</b>
                   </div>
                 </div>
               </div>
@@ -463,25 +449,54 @@
       [style*="min-width: 100vw"], [style*="min-width: 340px"] {
         min-width: 0 !important;
       }
+      /* Fix section headings so they are never cut off */
+      .section-heading {
+        word-break: break-word;
+        overflow-wrap: break-word;
+        white-space: normal !important;
+        width: 100%;
+        max-width: 100vw;
+        text-align: center;
+        margin: 0 auto 18px auto;
+        padding: 0 8px;
+      }
       @media (max-width: 900px) {
-        .section-contact-details .row[style*="flex-direction: row"] {
-          font-size: 13px !important;
-          width: 100vw !important;
-          max-width: 100vw !important;
-          overflow-x: auto !important;
-          gap: 10px !important;
+        .contact-details-row {
+          display: flex !important;
+          flex-direction: column !important;
+          align-items: center !important;
+          justify-content: flex-start !important;
+          gap: 0 !important;
         }
-        .section-contact-details .section-heading {
-          font-size: 20px !important;
+        .contact-img-col {
+          width: 100% !important;
+          max-width: 340px !important;
+          margin: 0 auto 12px auto !important;
+          display: flex !important;
+          justify-content: center !important;
         }
-        .section-contact-details a[style*="font-size: 22px"] {
+        .contact-img {
+          width: 100% !important;
+          max-width: 340px !important;
+          min-width: 0 !important;
+          margin-bottom: 0 !important;
+        }
+        .contact-desc-col {
+          width: 100% !important;
+          margin: 0 auto !important;
+        }
+        .contact-desc-box {
+          padding: 0 4px !important;
+        }
+        .contact-facebook-link {
           font-size: 16px !important;
         }
-        .section-contact-details [style*="font-size: 15px"] {
-          font-size: 12px !important;
+        .contact-facebook-img {
+          width: 24px !important;
+          height: 24px !important;
         }
-        .section-contact-details img.zoom-on-hover {
-          max-width: 340px !important;
+        .contact-facebook-desc {
+          font-size: 12px !important;
         }
       }
     </style>
