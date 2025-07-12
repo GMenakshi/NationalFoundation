@@ -42,7 +42,7 @@
   padding-right: 0;
   position: static;
 }
-}
+
 /* Timetable columns fixed size, no card background */
 .timetable-flex-col {
   flex: 0 0 280px;
@@ -725,6 +725,7 @@ ol li {
   letter-spacing: 0.03em;
   font-weight: 700;
   color: #000000;
+  top: 15px;
 }
 .section-heading:after {
   border-top: 3px dotted #018ff3;
